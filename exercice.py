@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 def majuscule(mot):
     # TODO completer la fonction
-    return mot.upper()
+    motMajuscule=""
+    for var in mot:
+        motMajuscule += chr(ord(var)-32)
+    return motMajuscule
 
 
 if __name__ == '__main__':
@@ -15,7 +18,8 @@ if __name__ == '__main__':
         'églantier',
         'arbre'
     ]
-    for i in range(len(mots)):
+    for i in range(len(mots)): #range(start, stop, step)->nb tours boucle for #len()->nb élements dans une liste donnée
         mots[i] = majuscule(mots[i])
 
     print(mots)
+
